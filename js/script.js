@@ -92,11 +92,8 @@ function playRound(humanChoice, computerChoice) {
 let humanScore = 0;
 let computerScore = 0;
 let round = 0;
-document.querySelectorAll(".userChoice button").forEach(
-    function (button) {
-        button.addEventListener("click",
-            function (event) {
-                playRound(event.target.id, getComputerChoice());
-            });
+document.querySelector(".userChoice").addEventListener("click",
+    function (event) {
+        playRound(event.target.id, getComputerChoice());
     });
 
